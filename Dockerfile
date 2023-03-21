@@ -5,4 +5,4 @@ RUN apt update && \
 	update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 && \
 	echo "export ROS_DISTRO=humble" > /etc/profile.d/00-ros.sh && \
 	cp /ros_entrypoint.sh /etc/profile.d/01-ros.sh
-CMD bash -l
+CMD ["/bin/bash", "-l"]

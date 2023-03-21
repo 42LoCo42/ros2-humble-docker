@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-docker exec \
+exec docker exec \
 	-it \
 	ros-humble \
 	bash -l -c "$*"

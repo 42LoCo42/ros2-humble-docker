@@ -10,5 +10,6 @@ with shared graphics, files (this repo folder maps to `/host`) and network.
 Everything should just work, scream at me if it doesn't!
 
 # Additional tools
-- `./run <command>` to run a command inside the container
+- `./start` to start the container
 - `./shell` to get a shell inside the container
+- `./run <command>` to run a command inside the container

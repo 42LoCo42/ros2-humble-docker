@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-docker run \
-	--rm \
+exec docker run \
 	-it \
 	--net=host \
 	--device /dev/dri/ \
