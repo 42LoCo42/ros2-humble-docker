@@ -2,6 +2,7 @@
 ```
 git clone https://github.com/42LoCo42/ros2-humble-docker
 cd ros2-humble-docker
+docker build -t my-ros .
 ./create
 ```
 You now have a docker container called `ros-humble`
