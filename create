@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+docker run \
+	--rm \
+	-it \
+	--net=host \
+	--device /dev/dri/ \
+	-e DISPLAY="$DISPLAY" \
+	-v "$HOME/.local/share/sx/xauthority:/root/.Xauthority:ro" \
+	-v "$PWD:/host" \
+	--name "ros-humble" \
+	my-ros "$@"
