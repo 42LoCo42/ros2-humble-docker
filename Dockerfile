@@ -3,6 +3,5 @@ RUN apt update && \
 	apt install locales && \
 	locale-gen en_US.UTF-8 && \
 	update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 && \
-	echo "export ROS_DISTRO=humble" > /etc/profile.d/00-ros.sh && \
-	cp /ros_entrypoint.sh /etc/profile.d/01-ros.sh
+	echo ". /opt/ros/humble/setup.bash" > /etc/profile.d/00-ros.sh
 CMD ["/bin/bash", "-l"]
