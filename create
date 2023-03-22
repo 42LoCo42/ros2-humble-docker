@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 exec docker run \
 	-it \
-	--net=host \
-	--device /dev/dri/ \
-	-e DISPLAY="$DISPLAY" \
-	-v "$HOME/.Xauthority:/root/.Xauthority:ro" \
+	--net host \
+	--ipc host \
+	--gpus all \
+	-e DISPLAY \
+	-v "$XAUTHORITY:/root/.Xauthority:ro" \
+	-v /tmp/.X11-unix:/tmp/.X11-unix \
 	-v "$PWD:/host" \
 	--name "ros-humble" \
 	my-ros "$@"
